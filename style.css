@@ -1,0 +1,159 @@
+/* Fonte e fundo geral da página */
+body {
+  font-family: "Quicksand", sans-serif;
+  background: #fff5f2;
+  margin: 0;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Cartão branco que envolve todo o app, como nas telas de referência */
+.container {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(255, 126, 135, 0.18);
+}
+
+/* Cabeçalho em gradiente, igual ao topo do app de referência */
+.topo {
+  background: linear-gradient(135deg, #fc8a90, #ff7e87);
+  padding: 20px 24px 64px 24px;
+  text-align: center;
+}
+
+.topo h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Gato decorativo */
+.gato {
+  width: 150
+  px;
+  margin: -54px auto 12px auto;
+}
+
+.gato img {
+  width: 100%;
+  display: block;
+}
+
+/* Organiza campo de texto e botão lado a lado */
+form {
+  display: flex;
+  gap: 10px;
+  padding: 20px 20px 0 20px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #ffe1d6;
+  border-radius: 12px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ff8a73;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #ff7e87;
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff5f6b;
+}
+
+/* Mensagem de erro/aviso exibida pelo JavaScript */
+#mensagem {
+  min-height: 18px;
+  padding: 8px 20px 0 20px;
+  color: #ff5f6b;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Remove o estilo padrão da lista */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 16px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada tarefa vira um card colorido */
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #ffe1da;
+  font-weight: 500;
+}
+
+/* Cores alternadas para os cards (coral, rosa e lilás) */
+li:nth-child(3n+2) {
+  background: #ffe0ec;
+}
+
+li:nth-child(3n+3) {
+  background: #ece1fb;
+}
+
+/* Texto da tarefa ocupa o espaço restante do card */
+.texto-tarefa {
+  flex: 1;
+}
+
+/* Bolinha usada para marcar a tarefa como concluída */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 2px solid #ff7e87;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Estilo aplicado quando a tarefa é marcada como concluída */
+.concluida .checkbox {
+  background: #ff7e87;
+}
+
+.concluida .texto-tarefa {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+/* Botão de remover tarefa, com ícone de "x" */
+.btn-remover {
+  border: none;
+  background: transparent;
+  color: #b96b66;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.btn-remover:hover {
+  color: #ff3b30;
+}
